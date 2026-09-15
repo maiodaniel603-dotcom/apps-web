@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-AO">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apps Web - Relógio, TODO e Piadas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">🚀 Apps Web</div>
+            <ul class="nav-links">
+                <li><a href="#relogio">Relógio</a></li>
+                <li><a href="#todo">TODO</a></li>
+                <li><a href="#piadas">Piadas</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- RELÓGIO COM FUSOS HORÁRIOS -->
+    <section id="relogio" class="app-section">
+        <div class="container">
+            <h2>🕐 Relógio Mundial</h2>
+            <div class="clocks-grid">
+                <div class="clock-card">
+                    <h3>🇦🇴 Luanda</h3>
+                    <div class="clock-display" id="luanda">--:--:--</div>
+                    <p>Angola (WAT)</p>
+                </div>
+                <div class="clock-card">
+                    <h3>🇵🇹 Lisboa</h3>
+                    <div class="clock-display" id="lisboa">--:--:--</div>
+                    <p>Portugal (WET)</p>
+                </div>
+                <div class="clock-card">
+                    <h3>🇧🇷 São Paulo</h3>
+                    <div class="clock-display" id="saopaulo">--:--:--</div>
+                    <p>Brasil (BRT)</p>
+                </div>
+                <div class="clock-card">
+                    <h3>🇺🇸 Nova York</h3>
+                    <div class="clock-display" id="novaiorque">--:--:--</div>
+                    <p>EUA (EST)</p>
+                </div>
+                <div class="clock-card">
+                    <h3>🇬🇧 Londres</h3>
+                    <div class="clock-display" id="londres">--:--:--</div>
+                    <p>UK (GMT)</p>
+                </div>
+                <div class="clock-card">
+                    <h3>🇯🇵 Tóquio</h3>
+                    <div class="clock-display" id="toquio">--:--:--</div>
+                    <p>Japão (JST)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TODO LIST -->
+    <section id="todo" class="app-section">
+        <div class="container">
+            <h2>✅ Minha Lista de Tarefas</h2>
+            <div class="todo-container">
+                <div class="todo-input-group">
+                    <input type="text" id="todoInput" placeholder="Adicione uma nova tarefa..." />
+                    <button onclick="adicionarTarefa()">Adicionar</button>
+                </div>
+                <div class="stats">
+                    <span>Total: <strong id="totalTarefas">0</strong></span>
+                    <span>Concluídas: <strong id="tarefasConcluidas">0</strong></span>
+                </div>
+                <ul id="todoList" class="todo-list"></ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- GERADOR DE PIADAS -->
+    <section id="piadas" class="app-section">
+        <div class="container">
+            <h2>😂 Gerador de Piadas</h2>
+            <div class="joke-container">
+                <div class="joke-display" id="jokeDisplay">
+                    Clique no botão para gerar uma piada!
+                </div>
+                <button class="btn-joke" onclick="gerarPiada()">Gerar Piada 😂</button>
+                <button class="btn-joke secondary" onclick="compartilharPiada()">Compartilhar 📱</button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 Apps Web - Criados com ❤️ em Angola</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
